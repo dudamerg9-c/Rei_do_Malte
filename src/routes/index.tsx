@@ -43,16 +43,13 @@ function Index() {
           </div>
 
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05]">
-            <span className="text-gradient-gold">Onde o malte</span>
-            <br />
-            <span className="text-[color:var(--foreground)]">é rei, o sabor</span>
-            <br />
-            <span className="text-gradient-gold italic">é lei.</span>
+            <span className="text-gradient-gold">Rei do malte</span>
           </h1>
 
           <p className="mt-8 max-w-2xl mx-auto text-base md:text-lg text-[color:var(--muted-foreground)] leading-relaxed">
-            Maltes selecionados, tecnologia artesanal e sabor incomparável.
-            Uma coroação líquida em cada gole.
+            <span className="text-gradient-gold">Onde o malte</span>{" "}
+            <span className="text-[color:var(--foreground)]">é rei, o sabor</span>{" "}
+            <span className="text-gradient-gold italic">é lei.</span>
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
