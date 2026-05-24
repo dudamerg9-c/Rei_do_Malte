@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import logo from "@/assets/logo.jpeg";
 import heroBg from "@/assets/hero-bg.jpg";
 
 export const Route = createFileRoute("/")({
@@ -39,29 +38,16 @@ function Index() {
         />
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 text-center py-32">
-          <div className="mb-8 flex justify-center">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-full blur-2xl opacity-60 gradient-gold" />
-              <img
-                src={logo}
-                alt="Rei do Malte"
-                width={220}
-                height={220}
-                className="relative h-44 w-44 md:h-56 md:w-56 rounded-full ring-2 ring-[color:var(--gold)]/60 glow-gold-strong animate-[fadeIn_1.2s_ease-out]"
-              />
-            </div>
-          </div>
-
           <div className="inline-block text-[11px] uppercase tracking-[0.5em] text-gold mb-6 px-4 py-1.5 rounded-full border border-gold-soft glass">
             ⚜ Cervejaria Real desde 2018 ⚜
           </div>
 
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05]">
-            <span className="text-gradient-gold">A cerveja</span>
+            <span className="text-gradient-gold">Onde o malte</span>
             <br />
-            <span className="text-[color:var(--foreground)]">dos verdadeiros</span>
+            <span className="text-[color:var(--foreground)]">é rei, o sabor</span>
             <br />
-            <span className="text-gradient-gold italic">reis.</span>
+            <span className="text-gradient-gold italic">é lei.</span>
           </h1>
 
           <p className="mt-8 max-w-2xl mx-auto text-base md:text-lg text-[color:var(--muted-foreground)] leading-relaxed">
