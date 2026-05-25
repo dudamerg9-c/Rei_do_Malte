@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting…</title>
+    <script>
+      (function () {
+        const basePath = "/Rei_do_Malte/";
+        const currentPath = window.location.pathname;
+
+        if (currentPath !== basePath) {
+          sessionStorage.setItem(
+            "redirect",
+            currentPath.replace(basePath, "/") + window.location.search + window.location.hash,
+          );
+        }
+
+        window.location.replace(basePath);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to the application…</p>
+  </body>
+</html>
