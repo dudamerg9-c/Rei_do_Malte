@@ -45,11 +45,24 @@ function previewServerEntryPlugin(): Plugin {
 // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
 // @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
 export default defineConfig({
+  vite: {
+    base: "/Rei_do_Malte/",
+  },
+
   tanstackStart: {
     server: { entry: "server" },
   },
+
   plugins: [injectedHeadScriptsPlugin(), previewServerEntryPlugin()],
+
   environments: {
+    client: {
+      build: {
+        rollupOptions: {
+          input: "./src/main.tsx",
+        },
+      },
+    },
     ssr: {
       build: {
         rollupOptions: {

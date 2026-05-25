@@ -62,10 +62,7 @@ function Sobre() {
 
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-[color:var(--foreground)]/90">
-              A <span className="text-gold font-semibold">Rei do Malte</span> nasceu da inquietação
-              de dois engenheiros mineiros que acreditavam numa ideia simples: cerveja artesanal
-              de verdade não precisa abrir mão da precisão da tecnologia — pelo contrário, é
-              elevada por ela.
+              O <span className="text-gold font-semibold">Rei do Malte</span> é uma marca criada por uma equipe de 5 integrantes com o objetivo de unir criatividade, tecnologia e produção cervejeira em um só projeto. A marca foi desenvolvida para apresentar soluções e experiências voltadas ao universo da cerveja, valorizando qualidade, inovação e trabalho em equipe. Nosso foco é desenvolver projetos modernos e funcionais, conectando conhecimento técnico e processos cervejeiros de forma prática e acessível.
             </p>
             <p className="text-[color:var(--muted-foreground)] leading-relaxed">
               Cada lote começa com maltes selecionados — Pilsen e Chateau Munich — e termina numa

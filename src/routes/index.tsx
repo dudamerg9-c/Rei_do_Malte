@@ -39,7 +39,7 @@ function Index() {
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 text-center py-32">
           <div className="inline-block text-[11px] uppercase tracking-[0.5em] text-gold mb-6 px-4 py-1.5 rounded-full border border-gold-soft glass">
-            ⚜ Rei do Malte desde 2026 ⚜
+            ⚜ desde 2026 ⚜
           </div>
 
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05]">
@@ -72,7 +72,7 @@ function Index() {
           <div className="mt-20 grid grid-cols-3 gap-4 max-w-3xl mx-auto">
             {[
                 { v: "5", l: "Litros / mês" },
-                { v: "24", l: "Receita" },
+                { v: "1", l: "Receita" },
               { v: "98%", l: "Pureza do malte" },
             ].map((s) => (
               <div key={s.l} className="glass rounded-xl p-5">

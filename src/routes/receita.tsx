@@ -55,7 +55,7 @@ const fervura = [
 
 function Receita() {
   return (
-    <PageShell title="Receita" kicker="Laboratório de sabor">
+    <PageShell title="Receita" kicker="">
       <div className="mx-auto max-w-7xl px-6 pb-20 space-y-8">
         {/* HERO RECIPE CARD */}
         <div className="glass-strong rounded-3xl p-6 md:p-10">
@@ -67,18 +67,7 @@ function Receita() {
                 Cerveja dourada, leve e refrescante. Processo rápido, ideal para iniciantes — perfil pilsen com fermentação Ale para simplificar o domínio doméstico.
               </p>
             </div>
-            <div className="flex gap-2">
-              {["Pilsen", "IPA", "Weiss", "Stout"].map((s, i) => (
-                <button
-                  key={s}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition ${
-                    i === 0 ? "gradient-gold text-[color:var(--navy-deep)] border-transparent" : "border-gold-soft text-gold hover:bg-[color:var(--gold)]/10"
-                  }`}
-                >
-                  {s}
-                </button>
-              ))}
-            </div>
+            
           </div>
 
           <div className="grid gap-6 lg:grid-cols-2">

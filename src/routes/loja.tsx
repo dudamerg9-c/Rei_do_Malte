@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 
-import reiDoMalte from "@/assets/rei-do-malte.jpg";
+import umLitro from "@/assets/1litro.jpeg";
+import seiscentosMl from "@/assets/600ml.jpeg";
+import duzentosSessentaNoveMl from "@/assets/269ml.jpeg";
 
 export const Route = createFileRoute("/loja")({
   component: Loja,
@@ -17,21 +19,21 @@ const beers = [
   {
     size: "1 litro",
     price: "R$ 29,90",
-    image: reiDoMalte,
+    image: umLitro,
     title: "Rei do Malte · 1 litro",
     description: "Cerveja artesanal puro malte para quem quer o produto completo em volume maior.",
   },
   {
     size: "600ml",
     price: "R$ 19,90",
-    image: reiDoMalte,
+    image: seiscentosMl,
     title: "Rei do Malte · 600ml",
     description: "A mesma cerveja artesanal em um formato mais compacto para o dia a dia.",
   },
   {
     size: "269ml",
     price: "R$ 9,90",
-    image: reiDoMalte,
+    image: duzentosSessentaNoveMl,
     title: "Rei do Malte · 269ml",
     description: "Uma dose prática e elegante da cerveja puro malte da Rei do Malte.",
   },
@@ -39,10 +41,10 @@ const beers = [
 
 function Loja() {
   return (
-    <PageShell title="Nossa Adega" kicker="">
+    <PageShell title="Nossa Loja" kicker="">
       <div className="mx-auto max-w-7xl px-6 pb-16">
         <p className="text-center max-w-2xl mx-auto text-[color:var(--muted-foreground)] mb-14">
-          Três estilos, uma coroa. Cada rótulo é uma jornada sensorial assinada pelos mestres cervejeiros.
+        
         </p>
 
         <div className="grid gap-7 sm:grid-cols-1 lg:grid-cols-3">
