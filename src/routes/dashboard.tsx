@@ -127,7 +127,7 @@ const tooltipStyle = {
 
 function Dashboard() {
   return (
-    <PageShell title="Centro de Comando" kicker="Dashboard Real · Lote SQN-001">
+    <PageShell title="Dashboard" kicker="">
       <div className="mx-auto max-w-7xl px-6 pb-20 space-y-6">
         {/* KPIs */}
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">

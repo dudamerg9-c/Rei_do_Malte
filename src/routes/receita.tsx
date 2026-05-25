@@ -13,7 +13,7 @@ export const Route = createFileRoute("/receita")({
 });
 
 const recipe = {
-  name: "Session Pilsen — SQN",
+  name: "Session Malt",
   volume: "5 Litros",
   abv: "3,0 – 4,7%",
   ibu: 18,
@@ -55,7 +55,7 @@ const fervura = [
 
 function Receita() {
   return (
-    <PageShell title="Receita Real" kicker="Laboratório de sabor">
+    <PageShell title="Receita" kicker="Laboratório de sabor">
       <div className="mx-auto max-w-7xl px-6 pb-20 space-y-8">
         {/* HERO RECIPE CARD */}
         <div className="glass-strong rounded-3xl p-6 md:p-10">

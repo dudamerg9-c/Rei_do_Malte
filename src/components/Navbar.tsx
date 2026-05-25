@@ -41,7 +41,6 @@ export function Navbar() {
             </div>
             <div className="leading-tight">
               <div className="font-display text-base font-bold text-gradient-gold tracking-wider">REI DO MALTE</div>
-              <div className="text-[10px] uppercase tracking-[0.3em] text-[color:var(--muted-foreground)]">Cervejaria Real</div>
             </div>
           </Link>
 

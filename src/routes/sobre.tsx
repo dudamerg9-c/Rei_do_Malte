@@ -45,7 +45,7 @@ const timeline = [
 
 function Sobre() {
   return (
-    <PageShell title="A Saga do Rei" kicker="Nossa história">
+    <PageShell title="Nossa história" kicker="">
       <div className="mx-auto max-w-6xl px-6 pb-20">
         <div className="grid gap-12 md:grid-cols-2 items-center">
           <div className="relative rounded-3xl overflow-hidden glow-gold">

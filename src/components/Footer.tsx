@@ -17,7 +17,7 @@ export function Footer() {
         </div>
         <div className="text-sm text-[color:var(--muted-foreground)]">
           <div className="text-gold font-semibold mb-2 font-display">Endereço</div>
-          Rua dos Maltes, 1066<br/>São Paulo · Brasil
+          Av. Eng. Eusébio Stevaux, 823 - Santo Amaro<br/>São Paulo · Brasil
         </div>
       </div>
       <div className="border-t border-gold-soft py-5 text-center text-xs text-[color:var(--muted-foreground)]">
