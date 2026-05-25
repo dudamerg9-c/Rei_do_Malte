@@ -4,6 +4,9 @@
   "sideEffects": false,
   "type": "module",
   "homepage": "https://dudamerg9-c.github.io/Rei_do_Malte",
+  "engines": {
+    "node": ">=24"
+  },
 
   "scripts": {
     "dev": "vite dev",
