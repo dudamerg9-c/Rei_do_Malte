@@ -1,66 +1,74 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 
+const driveLink = "https://drive.google.com/drive/folders/17v0uJ-LGNe2HY3ZksE1S7SsksfDhOLqo?usp=drive_link";
+
 export const Route = createFileRoute("/documentos")({
   component: Documentos,
   head: () => ({
     meta: [
       { title: "Documentos — Rei do Malte" },
-      { name: "description", content: "Central de documentos, laudos e certificados." },
+      { name: "description", content: "Acesse aqui todos os documentos da marca em um só lugar." },
     ],
   }),
 });
 
-const docs = [
-  { n: "Receita Técnica — Royal IPA", t: "PDF", s: "1.2 MB", d: "12/05/2026", tag: "Receita" },
-  { n: "Laudo Microbiológico — Lote 2026-04", t: "PDF", s: "320 KB", d: "08/05/2026", tag: "Laudo" },
-  { n: "Certificado Orgânico ABIC", t: "PDF", s: "780 KB", d: "01/05/2026", tag: "Certificado" },
-  { n: "Relatório de Produção — Abril", t: "XLSX", s: "2.1 MB", d: "30/04/2026", tag: "Relatório" },
-  { n: "Receita Técnica — Crown Pilsen", t: "PDF", s: "1.4 MB", d: "20/04/2026", tag: "Receita" },
-  { n: "Auditoria Sanitária 2026", t: "PDF", s: "3.6 MB", d: "15/04/2026", tag: "Certificado" },
-];
-
-function iconFor(t: string) {
-  return t === "XLSX" ? "▦" : "▤";
-}
-
 function Documentos() {
   return (
-    <PageShell title="Arquivo Real" kicker="Central de Documentos">
+    <PageShell title="Documentos" kicker="Central de Material">
       <div className="mx-auto max-w-6xl px-6 pb-20">
-        <div className="glass-strong rounded-2xl overflow-hidden">
-          <div className="hidden md:grid grid-cols-12 px-6 py-4 text-[10px] uppercase tracking-widest text-[color:var(--muted-foreground)] border-b border-gold-soft">
-            <div className="col-span-6">Documento</div>
-            <div className="col-span-2">Categoria</div>
-            <div className="col-span-1">Tipo</div>
-            <div className="col-span-1">Tam.</div>
-            <div className="col-span-1">Data</div>
-            <div className="col-span-1 text-right">Ação</div>
-          </div>
-
-          {docs.map((d) => (
-            <div key={d.n} className="grid grid-cols-1 md:grid-cols-12 gap-2 items-center px-6 py-5 border-b border-gold-soft last:border-0 hover:bg-[color:var(--gold)]/5 transition">
-              <div className="col-span-6 flex items-center gap-4">
-                <div className="h-11 w-11 rounded-lg gradient-gold grid place-items-center text-[color:var(--navy-deep)] text-xl font-bold">
-                  {iconFor(d.t)}
-                </div>
-                <div className="font-medium">{d.n}</div>
-              </div>
-              <div className="col-span-2">
-                <span className="text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-full border border-gold-soft text-gold">
-                  {d.tag}
-                </span>
-              </div>
-              <div className="col-span-1 text-sm text-[color:var(--muted-foreground)]">{d.t}</div>
-              <div className="col-span-1 text-sm text-[color:var(--muted-foreground)]">{d.s}</div>
-              <div className="col-span-1 text-sm text-[color:var(--muted-foreground)]">{d.d}</div>
-              <div className="col-span-1 md:text-right">
-                <button className="rounded-lg gradient-gold px-3 py-1.5 text-xs font-bold text-[color:var(--navy-deep)] hover:brightness-110 transition">
-                  Baixar ↓
-                </button>
-              </div>
+        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+          <section className="glass-strong rounded-[28px] p-8 md:p-10">
+            <div className="inline-flex items-center gap-2 rounded-full border border-gold-soft px-3 py-1 text-[11px] uppercase tracking-[0.35em] text-gold">
+              🗂️ Drive oficial
             </div>
-          ))}
+
+            <h2 className="mt-6 font-display text-3xl md:text-4xl text-gradient-gold">
+              Todos os documentos estão aqui
+            </h2>
+
+            <p className="mt-4 text-sm md:text-base leading-7 text-[color:var(--muted-foreground)]">
+              Para manter tudo organizado e acessível, centralizamos os documentos em uma pasta do Google Drive.
+              Acesse o link abaixo para conferir receitas, laudos, certificados e demais materiais da marca.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={driveLink}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl gradient-gold px-5 py-3 text-sm font-semibold text-[color:var(--navy-deep)] glow-gold-strong"
+              >
+                Abrir pasta do Drive
+                <span aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                href="/"
+                className="inline-flex items-center gap-2 rounded-xl glass-strong px-5 py-3 text-sm font-semibold text-gold border border-gold-soft"
+              >
+                Voltar ao início
+              </a>
+            </div>
+          </section>
+
+          <aside className="space-y-4">
+            <div className="glass-strong rounded-[24px] p-6">
+              <p className="text-[11px] uppercase tracking-[0.35em] text-gold">Atualização</p>
+              <h3 className="mt-4 font-display text-2xl text-gradient-gold">Conteúdo em constante evolução</h3>
+              <p className="mt-3 text-sm leading-7 text-[color:var(--muted-foreground)]">
+                A pasta oficial do Drive é o ponto único de consulta para o material da empresa.
+                Sempre que houver um novo documento, ele será adicionado por lá.
+              </p>
+            </div>
+
+            <div className="glass-strong rounded-[24px] p-6">
+              <p className="text-[11px] uppercase tracking-[0.35em] text-gold">Dica</p>
+              <p className="mt-4 text-sm leading-7 text-[color:var(--muted-foreground)]">
+                Para melhor visualização, abra o link em uma aba nova. Os arquivos ficam organizados pela pasta do Google Drive.
+              </p>
+            </div>
+          </aside>
         </div>
       </div>
     </PageShell>
