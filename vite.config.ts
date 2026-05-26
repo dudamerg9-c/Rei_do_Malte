@@ -44,9 +44,11 @@ function previewServerEntryPlugin(): Plugin {
 
 // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
 // @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
+const isVercel = Boolean(process.env.VERCEL);
+
 export default defineConfig({
   vite: {
-    base: "/Rei_do_Malte/",
+    base: isVercel ? "/" : "/Rei_do_Malte/",
   },
 
   tanstackStart: {

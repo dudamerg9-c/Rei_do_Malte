@@ -4,7 +4,7 @@ import { join } from "node:path";
 const rootDir = process.cwd();
 const clientDir = join(rootDir, "dist", "client");
 const assetsDir = join(clientDir, "assets");
-const basePath = "/Rei_do_Malte/";
+const basePath = process.env.VERCEL ? "/" : process.env.GH_PAGES_BASE_PATH || "/Rei_do_Malte/";
 
 const assets = readdirSync(assetsDir);
 const jsFile =
